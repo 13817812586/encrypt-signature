@@ -10,4 +10,5 @@ public interface EncryptSignatureService {
 
     JSONObject generateRSAKeys() throws Exception;
 
+    void encryptSignatureFlow() throws Exception;
 }

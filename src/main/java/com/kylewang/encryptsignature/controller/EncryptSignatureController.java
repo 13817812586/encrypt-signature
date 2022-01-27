@@ -5,6 +5,7 @@ import com.kylewang.encryptsignature.service.EncryptSignatureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.security.NoSuchAlgorithmException;
 
 @RestController
@@ -21,5 +22,10 @@ public class EncryptSignatureController {
     @GetMapping("/generateRSAKeys")
     public JSONObject generateRSAKeys() throws Exception {
         return encryptSignatureService.generateRSAKeys();
+    }
+
+    @GetMapping("/encryptSignatureFlow")
+    public void encryptSignatureFlow() throws Exception {
+        encryptSignatureService.encryptSignatureFlow();
     }
 }
